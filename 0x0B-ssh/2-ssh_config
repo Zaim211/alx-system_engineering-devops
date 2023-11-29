@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# ssh_config
-
-Host *
-    PasswordAuthentication no
-    IdentityFile ~/.ssh/school
-    HostName 54.209.117.94
-    User ubuntu
