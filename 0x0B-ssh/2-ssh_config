@@ -3,7 +3,7 @@
 
 Host *
     PasswordAuthentication no
-    IdentityFile ~/.ssh/rsa_id
+    IdentityFile ~/.ssh/id_rsa
     SendEnv LANG LC_*
     HashKnownHosts yes
     GSSAPIAuthentication yes
