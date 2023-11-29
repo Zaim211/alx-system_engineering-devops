@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# ssh_config
+
+Host *
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/rsa_id
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    HostName 100.26.142.9
+    User ubuntu
