@@ -15,7 +15,7 @@ frontend titay-tech-frontend
 	bind *:443 ssl crt crt /etc/haproxy/certs/www.titay.tech.pem
 	http-request redirect scheme https unless { ssl_fc }
 	http-request set-header X-Forwarded-Proto https
-	default_backend th3gr00t-tech-backend
+	default_backend titay-tech-backend
 
 backend titay-tech-backend
 	balance roundrobin
