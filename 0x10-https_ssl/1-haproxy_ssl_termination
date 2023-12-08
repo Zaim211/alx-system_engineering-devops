@@ -17,7 +17,7 @@ frontend titay-tech-frontend
 	http-request set-header X-Forwarded-Proto https
 	default_backend th3gr00t-tech-backend
 
-backend th3gr00t-tech-backend
+backend titay-tech-backend
 	balance roundrobin
 	server 376747-web-01 100.26.142.9:80 check
 	server 376747-web-02 54.160.106.85:80 check
