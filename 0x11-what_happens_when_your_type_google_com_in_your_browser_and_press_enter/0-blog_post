@@ -1,0 +1,85 @@
+What happens when you type google.com in your browser and press Enter:
+
+What’s a Server?
+A server is a computer program or device designed to provide services to another computer program and its user, known as the client. This architecture is commonly referred to as the client–server model.
+
+The Client-Server Model
+The client, typically the entity requesting information, often represents web users and their internet-connected devices—such as computers, laptops, or phones linked to Wi-Fi or a mobile network. The web-accessing software on these devices, like Google Chrome, Firefox, or Safari, functions as the client. For instance, when we access www.google.com, the client is our browser.
+
+On the other side, the server is responsible for sending or serving information to the client. Servers store webpages, sites, or apps. In our example, it would be the Google server.
+
+When a client device seeks to access a webpage, it requests a copy of the webpage from the server, which is then downloaded onto the client and displayed in the user's web browser.
+
+The Phonebook of the Internet
+When we type a website name or address (technically known as a URL, such as https://www.google.com) into our browser and press Enter, the browser breaks down the URL. To accomplish this, we need Domain Name System (DNS) servers.
+
+What’s a URL?
+URL stands for Uniform Resource Locator, used to access a website. A URL comprises several parts, including the protocol, hostname, port, path-and-file-name, and more. For our discussion, we'll focus on the protocol and hostname. In the case of https://www.google.com, https is the protocol, and www.google.com is the hostname, which can be a domain or an IP address.
+
+DNS (Domain Name System)
+Think of the Domain Name System (DNS) as the phonebook of the internet. DNS servers convert domain names (understood by humans) into machine-readable IP addresses. Each device connected to the internet has a unique IP address, allowing other machines to locate it.
+
+DNS resolution or DNS lookup involves four steps and servers in loading a webpage:
+
+DNS recursor receives queries from clients, and if the IP address is cached, it returns it; otherwise, it sends a query to the root DNS server.
+The root server refers requests to the appropriate Top-Level Domain (TLD) server.
+The TLD server hosts the last portion of a hostname (e.g., "com" in google.com) and sends the request to the authoritative nameserver.
+The Authoritative nameserver, the final stop, returns the IP address or an error message.
+Internet Protocol Suite (TCP/IP)
+Now that the browser knows where to find www.google.com, a connection is established to access the website. Browsers use the Internet Protocol Suite or TCP/IP (Transmission Control Protocol) to build such connections.
+
+TCP/IP, the most common protocol, governs the format of data sent via the internet or local network, facilitating various types of HTTP requests, such as sending emails, streaming videos, or connecting to a website.
+
+Traffic and Security Control
+Once the TCP connection is established, data transfer begins. To manage web traffic and avoid downtime, a load balancer (e.g., HAProxy) distributes traffic among multiple servers. Load balancers are crucial for high-traffic websites like Google.
+
+A firewall, a software or hardware device, acts as a barrier between secured internal networks and vulnerable networks like the internet. It blocks unauthorized access based on custom security rules, preventing potential threats.
+
+SSL (Secure Socket Layer)
+In today's digital world, security is paramount. Secure Socket Layer (SSL) is an additional security measure. SSL ensures that data exchanged between servers and web browsers remains private. An SSL certificate establishes an encrypted link, safeguarding private information, especially crucial when handling sensitive data like credit card information.
+
+To identify if a website uses an SSL certificate, look for the padlock and https:// in the URL instead of http.
+
+HTTP/HTTPS
+HTTP (HyperText Transfer Protocol) is a popular application protocol used by the World Wide Web, facilitating communication between web browsers and servers. It's a stateless, text-based protocol where the client pulls information from the server.
+
+HTTPS works similarly to HTTP but adds a layer of security, denoted by the 'S' for security. It indicates the use of an SSL certificate.
+
+HTTP Requests and Response Status Codes
+HTTP requests come in various methods:
+
+GET: To get data from a web server.
+POST: To send data to a web server.
+PUT: To update data on a web server.
+DELETE: To delete data from a web server.
+Every HTTP request results in a response with a status code indicating success or failure. Common status code categories include informational responses, successful responses, redirection messages, client error responses, and server error responses.
+
+Load-balancer:
+A load balancer is a device or software application that efficiently distributes incoming network traffic or workload across multiple servers. The primary purpose of a load balancer is to optimize resource utilization, ensure high availability, and enhance the overall performance and reliability of a system or application.
+
+Load balancers play a crucial role in distributing network or application traffic among multiple servers, preventing any single server from becoming overwhelmed with too much load. By balancing the workload across servers, load balancers help improve response times, prevent server downtime due to overloads, and ensure that no single server bears an excessive burden.
+
+There are various types of load balancing techniques, including:
+
+Round Robin: Requests are distributed evenly among the servers in a sequential manner.
+
+Least Connections: The load balancer directs traffic to the server with the fewest active connections, helping to distribute load more evenly.
+
+IP Hash: Uses a hash function based on the client's IP address to determine which server should handle a particular request. This ensures that requests from the same client are always directed to the same server.
+
+Weighted Round Robin: Assigns a weight to each server, and traffic is distributed based on these weights. Servers with higher weights receive more requests.
+
+Least Response Time: Directs traffic to the server with the lowest response time to ensure optimal performance.
+
+Load balancers are commonly employed in web applications, websites, and large-scale network environments where distributing traffic among multiple servers is essential for maintaining system efficiency, scalability, and reliability. They contribute to achieving high availability and fault tolerance by ensuring that if one server fails or becomes unavailable, other servers can seamlessly handle the load.
+
+Web and Application Servers
+A web server is software and hardware accepting HTTP/HTTPS requests and serving static content like simple HTML pages, images, or plain text files. Examples include Nginx or Apache.
+
+For web applications with dynamic content, an application server comes into play. It operates applications, communicates with database servers, manages user information, and serves dynamic content using the static content from the web server.
+
+Database
+The database server, a crucial component, consists of hardware and software running a database. Databases can be relational or non-relational, with examples like PostgreSQL, MySQL, SQLite, and MariaDB.
+
+Conclusion
+All these steps, involving the exchange of data and responses, occur rapidly when we type a website name like www.google.com. Understanding these processes provides insight into the intricacies of web communication. I hope this article aids in enhancing your comprehensionof what transpires when we access a website.
