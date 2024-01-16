@@ -8,14 +8,11 @@ def number_of_subscribers(subreddit):
     function that queries the Reddit API
     and returns the number of subscribers
     """
-    headers = {'User-agent': 'Google Chrome Version 120.0.6099.217'}
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    response = requests.get(url, headers=headers)
-    if response.status_code != 200:
-        return 0
-    try:
-        subscribers = response.json().get('data', {}).get('subscribers', 0)
-        return subscribers
-    except Exception as e:
-        print(f"Error parsing JSON: {e}")
+    url = f'https://www.reddit.com/r/{subreddit}/about.json'
+    headers = {"User-Agent": "Zaim211"}
+    url = "https://www.reddit.com/r/programming/hot.json".format(subreddit)
+    res = requests.get(url, headers=headers, allow_redirects=False)
+    if res.status_code == 200:
+        res.json().get('data').get('subscribers')
+    else:
         return 0
